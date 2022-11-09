@@ -36,18 +36,18 @@ int main() {
 
   while(winner(board) == NO_ONE)//ゲームの決着がつくまで回し続ける
   {
-    if(turn == human)//人間のターンのとき、人間の動きをboardに格納する
+    if(turn == human)//人間のターンのとき、人間の動きをboardに代入する
     {
       move = humanMove(board,human);
       board[move] = human;
     }
-    else//違った場合、コンピューターの動きをboardに格納する
+    else//違った場合、コンピューターの動きをboardに代入する
     {
       move = computerMove(board, computer);
       board[move] = computer;
     }
 
-    displayBoard(board);//boardに格納されている動きを盤面に表示する
+    displayBoard(board);//boardに代入されている動きを盤面に表示する
     turn = opponent(turn);//ターンを切り替える
   }
 
